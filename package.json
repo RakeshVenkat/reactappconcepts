@@ -1,0 +1,27 @@
+{
+  "name": "reactappconcepts",
+  "version": "1.0.0",
+  "description": "This repo shall contain boilerplate react code, wiki, readme, learnings, etc..",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RakeshVenkat/reactappconcepts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RakeshVenkat/reactappconcepts/issues"
+  },
+  "homepage": "https://github.com/RakeshVenkat/reactappconcepts#readme",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "lodash": "^4.17.5",
+    "webpack": "^4.2.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^2.0.13"
+  }
+}
