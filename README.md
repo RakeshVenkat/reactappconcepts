@@ -27,6 +27,16 @@ webpack-cli --config webpack.config.js
 npm install -S jquery
 npm install -S lodash
 
+With the above, I now added the configurations under webapck.config.js under section module/rules section. Look at the values used for transpiling js code.
+Now I add  the <div id='app'></div> into index.html
+Then I create the Layout component under index.js (look at code)
+`npm install webpack-dev-server --save-dev`
+Add the following to package.json :  "start:dev": "webpack-dev-server --content-base src --inline --hot", (for starting webpack server in hot reload mode)
+Then open: http://localhost:8080 
+Please note the index.html has to be under the src dir as all contents under this dir are only rendered.
+
+
+
 Open the index.html in your browser: file:///C:/RAKESH/REACTJS/reactappconcepts/index.html
 
 Extra (not used)
