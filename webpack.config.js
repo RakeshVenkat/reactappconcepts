@@ -1,10 +1,21 @@
-var debug = process.env.NODE_ENV !== "production";
-var webpack = require('webpack');
+const path = require('path');
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const CleanWebpackPlugin = require('clean-webpack-plugin');
+// var webpack = require('webpack');
+//import webapck from 'webpack'; --> not working !!
+
+// Deployment change - values should be development or staging or production
+const environment = 'development';
+process.env.NODE_ENV = environment;
+const isNonProEnv = process.env.NODE_ENV !== 'production';
 
 module.exports = {
+  resolve: {
+    extensions: ['.js', '.jsx', '.json'],
+  },
   context: __dirname,
-  devtool: debug ? "inline-sourcemap" : null,
-  entry: "./src/index.js",
+  devtool: isNonProEnv ? 'inline-sourcemap' : null, // https://webpack.js.org/guides/development/#using-source-maps
+  entry: './src/index.js',
   module: {
     rules: [
       {
@@ -19,10 +30,10 @@ module.exports = {
     ]
   },
   output: {
-    path: __dirname + "/src/",
-    filename: "client.min.js"
+    filename: 'client.min.js',
+    path: path.resolve(__dirname, 'dist'),
   },
-  plugins: debug ? [] : [
+  plugins: isNonProEnv ? [] : [
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
