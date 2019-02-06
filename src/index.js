@@ -4,10 +4,9 @@ import data from './data.json';
 require('./module1.js');
 // require('./module2.js');
 import Layout from './js/components/Layout';
-
+import Posts from './js/components/Posts';
 
 class Index extends React.Component {
-
   constructor() {
     super();
     this.message = 'Make sure you add super() as the first line in a constructor';
@@ -52,6 +51,11 @@ class Index extends React.Component {
 }
 const app = document.getElementById('app');
 const components = document.getElementById('components');
+const routes = document.getElementById('routes');
+const posts = document.getElementById('posts');
 
 ReactDOM.render(<Index/>, app);
 ReactDOM.render(<Layout/>, components);
+ReactDOM.render(<Login/>, routes);
+ReactDOM.render(<Posts/>, posts);
+/* ReactDOM.render(<h1>Hello1</h1>, routes); */

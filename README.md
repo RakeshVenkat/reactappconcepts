@@ -16,8 +16,19 @@ This repo shall contain boilerplate react code, wiki, readme, learnings, etc..
 - Code all modules seperately and have a single entry point.
 - Just say: `require(./module.js);` -> this wont work in a browser.
 - So use a node js installed on the system
+- https://reactjs.org/docs/reconciliation.html 
+- react Fiber : is from react 15.5.0 and definetely from React 16. 
+- https://github.com/acdlite/react-fiber-architecture
 
 
+----------
+
+## References: ##
+
+1. https://mobilunity.com/blog/react-js-developer-salary-in-different-countries/ 
+2. https://www.payscale.com/research/AU/Job=Web_Developer/Salary/1673c088/React.js
+3. https://moduscreate.com/blog/key-concepts-to-help-learn-reactjs/
+4. bootstrapcdn.com
 ----------
 
 ## Instructions to setup this project: ##
@@ -55,7 +66,8 @@ Please note the index.html has to be under the src dir as all contents under thi
 
 ## About Components: ##
 A component must have a render function.
-A `render` function must return one element only. It can never return 2 elements. In such a case you can wrpa both the elements in a parenmt element like a div.
+A `render` function must return one elemen
+t only. It can never return 2 elements. In such a case you can wrpa both the elements in a parenmt element like a div.
 `Constructor` : should have a super() function as its first line of the file.
 The data in a component shall be either in state, props or context.
 We need to use 'export default class <ComponentName> ..' inoder to make the <ComponentName> being imported in other components.
